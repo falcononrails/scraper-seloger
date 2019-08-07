@@ -53,12 +53,12 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 ITEM_PIPELINES = {
-    'simple_seloger.pipelines.SimpleSelogerPipeline': 300,
+    'simple_seloger.pipelines.MongoDbPipeline': 300,
 }
 
-MONGO_URI = 'mongodb://localhost:27017'
+MONGO_URI = 'mongodb://heroku_s69f85gw:16inpkg7t0g007tgosilqqme6@ds019882.mlab.com:19882/heroku_s69f85gw'
 
-MONGO_DB = 'soleger'
+MONGO_DB = 'heroku_s69f85gw'
 
 #DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 
