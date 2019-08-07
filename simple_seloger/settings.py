@@ -28,15 +28,15 @@ ROBOTSTXT_OBEY = False
 CONCURRENT_REQUESTS = 5
 
 # Crawlera proxy settings
-DOWNLOADER_MIDDLEWARES = {
-    'scrapy_crawlera.CrawleraMiddleware': 300,
-}
+# DOWNLOADER_MIDDLEWARES = {
+#     'scrapy_crawlera.CrawleraMiddleware': 300,
+# }
 
-CRAWLERA_APIKEY = '6520342f00ec43ba974c6012955fa9cf'
+# CRAWLERA_APIKEY = '6520342f00ec43ba974c6012955fa9cf'
 
-CRAWLERA_ENABLED = False
+# CRAWLERA_ENABLED = False
 
-AUTOTHROTTLE_ENABLED = False
+# AUTOTHROTTLE_ENABLED = False
 
 # Correctly show accents in JSON output
 FEED_EXPORT_ENCODING = 'utf-8'
@@ -53,7 +53,7 @@ DEFAULT_REQUEST_HEADERS = {
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 ITEM_PIPELINES = {
-    'simple_seloger.pipelines.MongoDbPipeline': 300,
+    'simple_seloger.pipelines.SimpleSelogerPipeline': 300,
 }
 
 MONGO_URI = 'mongodb://localhost:27017'
