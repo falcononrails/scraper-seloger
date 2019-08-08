@@ -9,11 +9,13 @@ import logging
 
 
 class SelogerSpider(scrapy.Spider):
-    name = "new_seloger"
+    name = "seloger"
 
-    # Change this to the URL corresponding to your own search on seloger.com
-    start_urls = [
-        'https://www.seloger.com/list.htm?tri=initial&enterprise=0&idtypebien=2,1&pxMax=1000000&idtt=2,5&naturebien=1,2,4&ci=910377']
+    # Support user giving the starting url to the scraper from the CLI
+    def __init__(self, *args, **kwargs):
+        super(SelogerSpider, self).__init__(*args, **kwargs)
+
+        self.start_urls = [kwargs.get('search_url').replace('\\', '')]
 
     # Parse the data we get from parsing the current page
     def parse(self, response):
