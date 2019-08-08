@@ -15,7 +15,7 @@ class SelogerSpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super(SelogerSpider, self).__init__(*args, **kwargs)
 
-        self.start_urls = [kwargs.get('search_url')]
+        self.start_urls = [kwargs.get('search_url').replace('\\', '')]
 
     # Parse the data we get from parsing the current page
 
