@@ -15,10 +15,10 @@ class SelogerSpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super(SelogerSpider, self).__init__(*args, **kwargs)
 
-        self.start_urls = [kwargs.get('search_url').replace('\\', '')]
-        print("WTFFFFF", self.start_urls[0])
+        self.start_urls = [kwargs.get('search_url')]
 
     # Parse the data we get from parsing the current page
+
     def parse(self, response):
         # For every annonce in the response
         for annonce in response.xpath("//div[@class='c-pa-info']"):
