@@ -56,9 +56,9 @@ ITEM_PIPELINES = {
     'simple_seloger.pipelines.MongoDbPipeline': 300,
 }
 
-MONGO_URI = 'mongodb://heroku_s69f85gw:16inpkg7t0g007tgosilqqme6@ds019882.mlab.com:19882/heroku_s69f85gw'
+MONGO_URI = 'mongodb://heroku_v10nm298:kj9ouu5ckrbmcoud5ib55041hv@ds137740.mlab.com:37740/heroku_v10nm298'
 
-MONGO_DB = 'heroku_s69f85gw'
+MONGO_DB = 'heroku_v10nm298'
 
 #DUPEFILTER_CLASS = 'scrapy_splash.SplashAwareDupeFilter'
 

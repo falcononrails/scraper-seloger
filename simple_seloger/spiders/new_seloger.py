@@ -19,6 +19,7 @@ class SelogerSpider(scrapy.Spider):
 
     # Parse the data we get from parsing the current page
     def parse(self, response):
+        print(self.start_urls[0])
         # For every annonce in the response
         for annonce in response.xpath("//div[@class='c-pa-info']"):
             # Load the following attributes into AnnonceItem
