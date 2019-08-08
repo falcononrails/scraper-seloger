@@ -6,10 +6,12 @@
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
 from pymongo import MongoClient
+import datetime
 
 
 class MongoDbPipeline(object):
-    collection = 'Annonces'
+    current_time = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
+    collection = 'Annonces - ' + current_time
 
     def __init__(self, mongo_uri, mongo_db):
         self.mongo_uri = mongo_uri
