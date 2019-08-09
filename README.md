@@ -4,7 +4,7 @@ This is a scraper for the website [seloger.com](www.seloger.com), built using [S
 ## Setup
 - Install virtualenv `pip install virtualenv`
 - Create a new virtual workspace `virtualenv my_workspace && cd my_workspace`
-- Clone the project into your environment folder:    
+- Clone the project into your workspace folder:    
 `git clone https://github.com/falcononrails/scraper-seloger.git` and navigate to it `cd scraper-seloger`
 - Install the required packages `pip install -r requirements.txt`
 
