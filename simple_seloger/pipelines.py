@@ -8,7 +8,7 @@
 from pymongo import MongoClient
 import datetime
 
-
+#Pipeline to store the collected items in an external MongoDB database
 class MongoDbPipeline(object):
     current_time = datetime.datetime.now().strftime("%I:%M%p on %B %d, %Y")
     collection = 'Annonces - ' + current_time

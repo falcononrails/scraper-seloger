@@ -14,7 +14,6 @@ class SelogerSpider(scrapy.Spider):
     # Support user giving the starting url to the scraper from the CLI
     def __init__(self, *args, **kwargs):
         super(SelogerSpider, self).__init__(*args, **kwargs)
-
         self.start_urls = [kwargs.get('search_url').replace('\\', '')]
 
     # Parse the data we get from parsing the current page
@@ -34,17 +33,20 @@ class SelogerSpider(scrapy.Spider):
 
             loader.add_xpath('ville', "//div[@class='c-pa-city']")
 
-            # Filter annonces by plateforme for formatting purposes
-            if(annonce.xpath(".//a[@class='c-pa-link link_AB']/@href").extract_first().find('neuf') != -1):
-                loader.add_value('plateforme', "seloger_neuf")
-            elif(annonce.xpath(".//a[@class='c-pa-link link_AB']/@href").extract_first().find('construire') != -1):
-                loader.add_value('plateforme', "seloger_construire")
-            else:
-                loader.add_value('plateforme', "seloger")
-
             # Get the IDs of every annonce to get (les +, general, exterieur) using the parse_json_info method
             annonce_id = annonce.xpath(
                 ".//div[@class='h-fi-pulse annonce__detail__sauvegarde']/@data-idannonce").extract_first()
+
+            try:
+                # Filter annonces by plateforme for formatting purposes
+                if(annonce.xpath(".//a[@class='c-pa-link link_AB']/@href").extract_first().find('neuf') != -1):
+                    loader.add_value('plateforme', "seloger_neuf")
+                elif(annonce.xpath(".//a[@class='c-pa-link link_AB']/@href").extract_first().find('construire') != -1):
+                    loader.add_value('plateforme', "seloger_construire")
+                else:
+                    loader.add_value('plateforme', "seloger")
+            except AttributeError:
+                logging.info("A filtering error has occured")
 
             # Send a request to get additional data for each annonce
             yield scrapy.Request(url="https://www.seloger.com/detail,json,caracteristique_bien.json?idannonce={0}".format(annonce_id), callback=self.parse_json_info, meta={'loader': loader})
