@@ -43,7 +43,7 @@ The **scrapyd** interface is now accessible through `https://seloger-demo.heroku
 To start a job through scrapyd, run the following from your terminal:
 
 ```bash
-curl https://seloger-demo.herokuapp.com/schedule.json -F project=simple_seloger -F spider=seloger 
+curl https://seloger-demo.herokuapp.com/schedule.json -F project=default -F spider=seloger 
 -F search_url="https://www.seloger.com/list.htm?tri=initial&enterprise=0&idtypebien=2,1&pxMax=1000000&idtt=2,5&naturebien=1,2,4&ci=910377"
 ```
 ## Adding MongoDB Lab module through Heroku
