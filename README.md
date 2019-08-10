@@ -1,4 +1,5 @@
-## Overview
+[![Python 3.6.5](https://img.shields.io/badge/python-3.6.5-blue.svg)](https://www.python.org/downloads/release/python-365/)
+## Overview  
 This is a scraper for the website [seloger.com](https://www.seloger.com), built using [Scrapy](https://github.com/scrapy/scrapy/tree/1.7).
 
 ## Setup
