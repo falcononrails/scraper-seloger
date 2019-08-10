@@ -55,4 +55,4 @@ curl https://seloger-demo.herokuapp.com/schedule.json -F project=default -F spid
 MONGO_URI = 'mongodb://heroku_v10nm298:kj9ouu5ckrbmcoud5ib55041hv@ds137740.mlab.com:37740/heroku_v10nm298'
 MONGO_DB = 'heroku_v10nm298'
 ```
-The data you scrape will now be saved in an external cloud MongoDB database linked with your heroku app.
+The data you scrape will now be saved in an external cloud MongoDB database linked with your Heroku app.
