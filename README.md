@@ -1,5 +1,5 @@
 ## Overview
-This is a scraper for the website [seloger.com](www.seloger.com), built using [Scrapy](https://github.com/scrapy/scrapy/tree/1.7).
+This is a scraper for the website [seloger.com](https://www.seloger.com), built using [Scrapy](https://github.com/scrapy/scrapy/tree/1.7).
 
 ## Setup
 - Install virtualenv `pip install virtualenv`
@@ -13,7 +13,7 @@ Go to the project folder
 ```bash
 cd ~/my_workspace/scraper-seloger/simple_seloger
 ```
-Run the spider using the URL of your search query on [seloger.com](www.seloger.com)
+Run the spider using the URL of your search query on [seloger.com](https://www.seloger.com)
 ```bash
 scrapy crawl seloger -a search_url="https://www.seloger.com/list.htm?tri=initial&enterprise=0&idtypebien=2,1&pxMax=1000000&idtt=2,5&naturebien=1,2,4&ci=910377"
 ```
