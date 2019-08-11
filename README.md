@@ -33,7 +33,7 @@ A typical scenario is `MONGO_URI = mongodb://localhost:27017` and `MONGO_DB = se
 
 The repo has all the files you need to deploy to Heroku, I'll clarify the steps below.
 - Install [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli#download-and-install)
-- Create a a new Heroku app `heroku create seloger-demo`
+- Create a new Heroku app `heroku create seloger-demo`
 - Add the new app as a remote `heroku git:remote -a seloger-demo`
 - Change the **url** argument under the **[deploy:local]** section in the *scrapy.cfg* file to `url = https://seloger-demo.herokuapp.com/`
 - Add `git add .` and commit everything `git commit -m "first commit"`
