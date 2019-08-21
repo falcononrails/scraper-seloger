@@ -32,7 +32,7 @@ CONCURRENT_REQUESTS = 10
 #     'scrapy_crawlera.CrawleraMiddleware': 300,
 # }
 
-# CRAWLERA_APIKEY = '6520342f00ec43ba974c6012955fa9cf'
+# CRAWLERA_APIKEY = 'YOUR_API_KEY'
 
 # CRAWLERA_ENABLED = False
 
