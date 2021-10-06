@@ -24,7 +24,7 @@ queuelib==1.5.0
 requests==2.22.0
 Scrapy==1.7.3
 scrapy-crawlera==1.6.0
-scrapy-splash==0.7.2
+scrapy-splash==0.8.0
 scrapyd==1.2.1
 scrapyd-client==1.2.0a1
 service-identity==18.1.0
